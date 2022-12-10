@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+
 struct Home: View {
     @StateObject var results = HomeViewModel()
 
     var body: some View {
         VStack {
-            Text("\(results.users.count)")
+            List(results.users) {result in
+                Text(result.name)
+            }
             .task {
                 await results.loadData()
             }

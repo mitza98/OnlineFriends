@@ -8,18 +8,15 @@
 import Foundation
 
 
-class User: Codable, Identifiable {
-    var id: String
-    var isActive: Bool
-    var name: String
-    var age: Int
-    var company: String
-    var email: String
-    var address: String
-    var about: String
-    var registered: Date
-    var tags: [String]
-    var friends: [Friend]
+struct User: Codable, Identifiable {
+    let id: String
+    let isActive: Bool
+    let name: String
+    let age: Int
+    let company, email, address, about: String
+    let registered: Date
+    let tags: [String]
+    let friends: [Friend]
 }
 
 class Friend: Codable {
