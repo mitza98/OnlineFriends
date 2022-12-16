@@ -34,12 +34,12 @@ extension User {
         case true :
             return Circle()
                 .foregroundColor(.green)
-                .frame(width: 40, height: 40)
+                .frame(width: 30, height: 30)
                 .scaledToFit()
         case false:
             return Circle()
                 .foregroundColor(.gray)
-                .frame(width: 40, height: 40)
+                .frame(width: 30, height: 30)
                 .scaledToFit()
         }
     }

@@ -16,9 +16,11 @@ struct UserDetailView: View {
                     Section(header: Text("Info")) {
                         Text(user.name)
                             .font(.title)
+                            .frame(maxWidth: .infinity, alignment: .center)
                         Text("registration date: \(formatDate(date: user.registered), style: .date)")
                             .font(.caption2)
                             .fontWeight(.light)
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
                 }
                 .frame(height: 150, alignment: .center)
