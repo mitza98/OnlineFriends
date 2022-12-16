@@ -26,20 +26,26 @@ struct UserDetailView: View {
                     Form {
                         Section(header: Text("User details")) {
                             List {
-                                Text("age:\(user.age)")
-                                Text("email:\(user.email)")
-                                Text("address: \(user.address)")
-                                Text("company: \(user.company)")
+                                Text("Age:\(user.age)")
+                                Text("Email:\(user.email)")
+                                Text("Address: \(user.address)")
+                                Text("Company: \(user.company)")
                             }
-                            DisclosureGroup("tags") {
+                            DisclosureGroup("Tags") {
                                 List (user.tags, id: \.self) { tag in
                                     withAnimation {
                                         Text(tag)
                                     }
                                 }
                             }
+                            DisclosureGroup("Friends") {
+                                List (user.friends) { friend in
+                                    withAnimation {
+                                        Text(friend.name)
+                                    }
+                                }
+                            }
                         }
-                        Spacer()
                     }
                 
             }
