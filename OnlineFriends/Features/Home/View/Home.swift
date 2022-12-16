@@ -23,7 +23,6 @@ struct Home: View {
                         }
                         
                     }
-                
             }
             .task {
                 await results.loadData()

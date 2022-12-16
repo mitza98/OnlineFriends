@@ -20,7 +20,7 @@ struct User: Codable, Identifiable {
     
 }
 
-class Friend: Codable, Identifiable {
+struct Friend: Codable, Identifiable {
     var id: String
     var name: String
 }
